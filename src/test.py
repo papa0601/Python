@@ -10,8 +10,14 @@ urllib.request.urlretrieve('https://bit.ly/3fs4fBA', 'C:\WhaleDownloadTemp\Logo.
 # print(tell)
 # Location = Lversionexist.index('1.5.2')
 # print(Lversionexist[Location])
-import os
 
-
-
-os.system('C:\ncd ..\ncd ..\nmkdir aaa')
+neweula = ''
+eula = open("C:/Minecraft_Server_1.18.1/eula.txt", 'r')
+eulacopy = eula.readlines()
+eula.close()
+eulacopy[eulacopy.index('eula=false\n')] = 'eula=true'
+for i in range(len(eulacopy)):
+    neweula += eulacopy[i]
+eula = open("C:/Minecraft_Server_1.18.1/eula.txt", 'w')
+eula.write(neweula)
+eula.close()
