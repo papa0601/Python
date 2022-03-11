@@ -179,10 +179,45 @@ while True:
                            '4. hard - 어려움'
                            '변경하려는 설정의 알맞은 번호를 입력하세요 [공백으로 둘 시 기본값 유지]\n'
                            '>>>')
+            if answer == '1':
+                dif[2] = 'peaceful'
+                dif[3] = '평화로움'
+                break
 
+            elif answer == '2':
+                break
 
+            elif answer == '3':
+                dif[2] = 'normal'
+                dif[3] = '보통'
+                break
 
+            elif answer == '4':
+                dif[2] = 'hard'
+                dif[3] = '어려움'
+                break
 
+            else:
+                clean()
+                print('!다시 입력해주세요!')
+                
+        while True:
+            print('[설정 변경 페이지]===============================================================================')
+            print('[2. 복돌 유저의 접속을 허용하시겠습니까?] 기본값: {dif[0]} - dif[1] 현재 설정값: {dif[2]} - {dif[3]}')
+            answer = input('1. true - 허용 안 함(기본값)\n'
+                           '2. false - 허용\n'
+                           '변경하려는 설정의 알맞은 번호를 입력하세요 [공백으로 둘 시 기본값 유지]\n'
+                           '>>>')
+            if answer == '1':
+                break
+            
+            elif answer == '2':
+                onmd[2] = 'false'
+                onmd[3] = '허용'
+
+            else:
+                clean()
+                print('!다시 입력해주세요!')
 
 
 
