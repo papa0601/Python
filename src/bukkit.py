@@ -1,5 +1,4 @@
 import urllib.request
-import urllib.error
 from time import sleep
 import subprocess
 from os import system
@@ -218,6 +217,26 @@ while True:
             else:
                 clean()
                 print('!다시 입력해주세요!')
+
+        while True:
+            print('[설정 변경 페이지]===============================================================================')
+            print('[3. PVP를 허용하시겠습니까?] 기본값: {pvp[0]} - pvp[1] 현재 설정값: {pvp[2]} - {pvp[3]}')
+            answer = input('1. true - 허용(기본값)\n'
+                           '2. false - 허용 안 함\n'
+                           '변경하려는 설정의 알맞은 번호를 입력하세요 [공백으로 둘 시 기본값 유지]\n'
+                           '>>>')
+            if answer == '1':
+                break
+            elif answer == '2':
+                pvp[2] = 'false'
+                pvp[3] = '허용 안 함'
+
+            else:
+                clean()
+                print('!다시 입력해주세요!')
+
+        while True:
+
 
 
 
